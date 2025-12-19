@@ -1,0 +1,163 @@
+{
+  "waiters": {
+    "1": {
+      "name": "Эльдар",
+      "phone": "https://vtb.paymo.ru/collect-money/qr/?transaction=21bdfecf-6718-45fd-beb3-596982983632",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "ㅤ0",
+          "rating": 5,
+          "text": "Обслуживание на высоте"
+        },
+        {
+          "user": "ㅤ0",
+          "rating": 5,
+          "text": "Очень вежливый официант, спасибо Эльдару!"
+        },
+        {
+          "user": "Ghost",
+          "rating": 5,
+          "text": "самый лучший официант в мире, лучше нигде вообще не найдете"
+        },
+        {
+          "user_id": 1391572568,
+          "user": "ㅤ0",
+          "rating": 4,
+          "text": "Очень вежливый официант",
+          "date": "2025-12-18T23:06:43.418302"
+        }
+      ],
+      "photo": "waiter1.jpg"
+    },
+    "2": {
+      "name": "Ксения",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "waiter2.jpg"
+    },
+    "3": {
+      "name": "Виктория",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [
+        {
+          "user_id": 1391572568,
+          "user": "ㅤ0",
+          "rating": 5,
+          "text": "Очень хороший официант",
+          "date": "2025-12-18T23:16:20.007810"
+        }
+      ],
+      "photo": "waiter3.jpg"
+    },
+    "4": {
+      "name": "Дарья",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "waiter4.jpg"
+    },
+    "5": {
+      "name": "Елизавета Скрипка",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "waiter5.jpg"
+    },
+    "6": {
+      "name": "Елизавета Кирюхина",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [
+        {
+          "user_id": 1391572568,
+          "user": "ㅤ0",
+          "rating": 5,
+          "text": "Очень вежливый и быстрый официант",
+          "date": "2025-12-18T23:07:20.691832"
+        }
+      ],
+      "photo": "waiter6.jpg"
+    },
+    "7": {
+      "name": "Анастасия Кнопко",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "waiter7.jpg"
+    },
+    "8": {
+      "name": "Владимир",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [
+        {
+          "user": "Эльдар",
+          "rating": 5,
+          "text": "Отличный официант!!!"
+        }
+      ],
+      "photo": "waiter8.jpg"
+    }
+  },
+  "bartenders": {
+    "1": {
+      "name": "Александр (кассир)",
+      "phone": "Реквизиты",
+      "rating": 4.0,
+      "reviews": [
+        {
+          "user_id": 1391572568,
+          "user": "ㅤ0",
+          "rating": 4,
+          "text": "Очень вежлив",
+          "date": "2025-12-18T23:14:50.677005"
+        }
+      ],
+      "photo": "bartender1.jpg"
+    },
+    "2": {
+      "name": "София (кассир)",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "bartender2.jpg"
+    },
+    "3": {
+      "name": "Екатерина",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "bartender3.jpg"
+    },
+    "4": {
+      "name": "Андрей (кальян)",
+      "phone": "Реквизиты",
+      "rating": 5.0,
+      "reviews": [],
+      "photo": "bartender4.jpg"
+    }
+  },
+  "cold_kitchen": {
+    "rating": 0,
+    "reviews": []
+  },
+  "hot_kitchen": {
+    "rating": 0,
+    "reviews": []
+  },
+  "pastry_kitchen": {
+    "rating": 5.0,
+    "reviews": [
+      {
+        "user_id": 1391572568,
+        "user": "ㅤ0",
+        "rating": 5,
+        "text": "Очень вкусно",
+        "date": "2025-12-18T23:14:31.907369"
+      }
+    ]
+  }
+}
