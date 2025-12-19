@@ -13,9 +13,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 
-# =========================
 # CONFIG
-# =========================
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -30,9 +28,7 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
-# =========================
 # CATEGORIES
-# =========================
 
 KITCHEN_CATEGORIES = {
     "cold_kitchen": "🥗 Холодный цех",
@@ -46,17 +42,13 @@ ALL_CATEGORIES = {
     **KITCHEN_CATEGORIES,
 }
 
-# =========================
 # FSM
-# =========================
 
 class ReviewStates(StatesGroup):
     rating = State()
     text = State()
 
-# =========================
 # DATA
-# =========================
 
 def load_staff_data():
     if not os.path.exists(DATA_FILE):
@@ -89,9 +81,8 @@ def save_staff_data():
 
 staff_data = load_staff_data()
 
-# =========================
 # HELPERS
-# =========================
+
 def get_top_staff(min_reviews=3, limit=10):
     result = []
 
@@ -140,9 +131,7 @@ async def smart_edit(cb: types.CallbackQuery, text: str, keyboard):
         )
 
 
-# =========================
 # KEYBOARDS
-# =========================
 
 def start_keyboard():
     kb = ReplyKeyboardBuilder()
@@ -203,9 +192,8 @@ def workshop_keyboard(category):
     kb.adjust(1)
     return kb.as_markup()
 
-# =========================
 # HANDLERS
-# =========================
+
 @dp.callback_query(F.data == "main_menu")
 async def back_to_main_menu(cb: types.CallbackQuery):
     await replace_message(
@@ -300,7 +288,6 @@ async def show_staff(cb: types.CallbackQuery):
         f"⭐ Рейтинг: {staff['rating']}/5"
     )
 
-    # ⛔ НИКОГДА не пытаемся менять фото у сообщения
     await cb.message.delete()
 
     if photo:
@@ -319,9 +306,7 @@ async def show_staff(cb: types.CallbackQuery):
 
     await cb.answer()
 
-# =========================
 # REVIEWS VIEW
-# =========================
 
 @dp.callback_query(F.data.startswith("reviews_workshop_"))
 async def show_workshop_reviews(cb: types.CallbackQuery):
@@ -360,9 +345,7 @@ async def show_staff_reviews(cb: types.CallbackQuery):
     await smart_edit(cb, text, kb.as_markup())
     await cb.answer()
 
-# =========================
 # REVIEWS ADD
-# =========================
 
 @dp.callback_query(F.data.startswith("review_workshop_"))
 async def review_workshop_start(cb: types.CallbackQuery, state: FSMContext):
@@ -446,15 +429,15 @@ async def review_text(message: types.Message, state: FSMContext):
     save_staff_data()
     await state.clear()
 
-    # ✅ ВАЖНО: возвращаем кнопку START
+    # возвращаем кнопку START
     await message.answer(
         "✅ Отзыв сохранён!\n\nНажмите 🚀 START, чтобы оставить отзыв или оставить на чай!",
         reply_markup=start_keyboard()
     )
 
-# =========================
-# FALLBACK (кнопка START всегда видна)
-# =========================
+
+# FALLBACK (кнопка START видна)
+
 
 @dp.message()
 async def fallback(message: types.Message):
@@ -468,9 +451,7 @@ async def fallback(message: types.Message):
             reply_markup=start_keyboard()
         )
 
-# =========================
 # RUN
-# =========================
 
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
